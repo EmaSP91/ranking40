@@ -53,7 +53,7 @@
 }
 
 
-.links li a.active-home{
+.active-home{
     background-color: rgb(201, 26, 50);
     padding: 5px 10px;
     border-radius: 20px;
@@ -70,12 +70,48 @@ li a:hover, li a:active {
 
 /***Nabvar/Barra de navegación***/
 
+.mobile-nav{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 98;
+    background: linear-gradient(0deg, rgba(30,16,41,1) 10%, rgba(30,16,41,1) 15%, rgba(108,33,64,1) 83%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: .5s;
+}
+
+
+.mobile-nav a{
+    margin-top: 40px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: white;
+    padding: 10px 30px ;
+    border-radius: 25px;
+    background:rgb(119 36 90);
+    transition:.5s;
+    
+    
+}
+
+.mobile-nav a:hover{
+    background:rgb(93 29 71);
+    color:rgb(201, 26, 50);
+}
+
 .menu{
     position: absolute;
     top: 50px;
     right: 15px;
     width: 40px;
     height: 40px;
+    z-index: 99;
     cursor: pointer;
     transition: all .5s ease-in-out;
     
@@ -208,8 +244,8 @@ button:hover{
 
 .music-logo-container{
     position: absolute;
-    left: 160px;
-    top: 120px;
+    left: 10%;
+    top: 15%;
   }
 
 .music-logo{
@@ -218,8 +254,8 @@ button:hover{
 
 .howto-container{
     position: absolute;
-    right:75px;
-    top:170px
+    right:10%;
+    top:30%;
   }
 
 .howto-container h3, .howto-container p{
@@ -258,7 +294,7 @@ span{
   
 }
 .bad-omens {
-    width:50%;
+    width:60%;
     border-radius: 20px;   
 }
 
@@ -297,7 +333,22 @@ h4{
 /*********Página Votar**********/
 
 .votar-background{
-    background: linear-gradient(0deg, rgba(30,16,41,1) 10%, rgba(30,16,41,1) 15%, rgba(108,33,64,1) 83%);
+    background-image: url(img/votarfondo.webp);
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+
+.votar-background::after{
+    content:"";
+    width:100%;
+    height:100%;
+    position:absolute;
+    left: 0;
+    top:0;
+    z-index:-1;
+    background-color: #000000bf;
 }
 
 
@@ -372,7 +423,11 @@ input{
 
 .scrolling-container{
     margin-top: 40px;
-    height: 100vh;
+}
+
+
+.scrolling-container .scrolling-wrapper{
+    margin-top: 50px;
 }
 
 .scrolling-wrapper{
@@ -437,7 +492,7 @@ input{
     position: absolute;
     bottom:0;
     width: 100%;
-    height: 300px;
+    height: 250px;
     background: linear-gradient(to top,rgb(0 0 0), transparent);
     border-bottom-left-radius:15px;
     border-bottom-right-radius:15px;
@@ -448,8 +503,8 @@ input{
     position: absolute;
     bottom:0;
     width: 100%;
-    height: 300px;
-    background: linear-gradient(to top,rgb(0 0 0), transparent);
+    height: 250px;
+    background: linear-gradient(to top,rgb(43 1 57), transparent);
     border-bottom-left-radius:15px;
     border-bottom-right-radius:15px;
 }
@@ -459,8 +514,8 @@ input{
     position: absolute;
     bottom:0;
     width: 100%;
-    height: 300px;
-    background: linear-gradient(to top,rgb(0 0 0), transparent);
+    height: 250px;
+    background: linear-gradient(to top,rgb(85 3 3), transparent);
     border-bottom-left-radius:15px;
     border-bottom-right-radius:15px;
 }
@@ -486,10 +541,61 @@ input{
     padding: 5px;
 }*/
 
+@media (max-width:1030px) {
 
+
+    .music-logo{
+        width: 220px;
+    }
+
+
+    .music-logo-container{
+        right:10%;
+        top: 25%;
+    }
+
+
+    .howto-container h3, .howto-container p{
+        width:350px;
+    }
+    
+    .howto-container h3{
+         font-size: 2.5rem;
+    }
+    
+    
+    .howto-container p{
+        font-size: 1.5rem;
+    }
+    
+   
+    .bad-omens {
+        width:80%;
+        border-radius: 10px;   
+    }
+}
+
+    /***Página votar formulario***/
+
+    .votar-form{
+       
+         width: 60%;
+    }
 
 
 @media (max-width:768px){
+
+    .mobile-nav.active{
+       left: 0;
+    }
+
+    .menu{
+        right: 25px;
+    }
+
+    .header-background{
+        padding: 0;
+    }
 
     h1{
         font-size:3.5rem
@@ -539,12 +645,40 @@ input{
         transform: rotate(-45deg) translate(35px, 35px);
       }
 
-   .nav-container ul.active{
-         display: flex;
-        
-     }
 
-    
+
+     /***Sección cómo votar***/
+
+
+    .polygon{
+        clip-path: polygon(0 20%, 100% 6%, 100% 94%, 0 80%);
+    }
+
+     .music-logo{
+        width: 190px;
+    }
+
+
+    .music-logo-container{
+        right:10%;
+        top: 25%;
+    }
+
+
+    .howto-container h3, .howto-container p{
+        width:300px;
+    }
+
+    .howto-container h3{
+        font-size: 2.3rem;
+    }
+   
+   
+   .howto-container p{
+       font-size: 1.3rem;
+    }
+
+     
     /***Imágenes del slider de la página Inicio***/
     .bad-omens {
         width:100%;
@@ -558,15 +692,31 @@ input{
 }
 
 
-@media (max-width:380px) {
+@media (max-width:650px) {
+    .music-logo-container{
+        left: 5%;
+        top: 25%;
+      }
+    
+    
+    .howto-container{
+        right:5%;
+        top:30%;
+      }
+    
+}
+
+
+
+
+@media (max-width:560px) {
      /***Página de Inicio contenedor polígono***/
 
      .polygon{
         clip-path: polygon(0 25%, 100% 6%, 100% 94%, 0 75%);
-     }
+     }}
 
-    .music-logo-container{
-        position: absolute;
+    /*.music-logo-container{
         right:25px;
         top: 120px;
     }
@@ -595,5 +745,5 @@ input{
             font-size: 1.5rem;
     }
      
-}
+}*/
 

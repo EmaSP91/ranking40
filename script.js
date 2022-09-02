@@ -1,11 +1,11 @@
 const toggleBtn    = document.querySelector('.menu')
-const ulLinks      = document.querySelector('ul')
-const navContainer = document.querySelector('.nav-container')
+//const ulLinks      = document.querySelector('ul')
+const mobileNav = document.querySelector('.mobile-nav')
 
 toggleBtn.addEventListener('click', () => {
-  ulLinks.classList.toggle('active')
+  //ulLinks.classList.toggle('active')
   toggleBtn.classList.toggle('open-close-btn')
-  navContainer.classList.toggle('active')
+  mobileNav.classList.toggle('active')
 })
 
 

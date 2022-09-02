@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Poppins&family=Roboto:wght@100;400&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.header-background{
+    background-image: url(img/header.jpg);
+    background-size: cover;
+    height: 100vh;
+    padding: 0px 20px;
+}
+
+.nav-container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+    line-height: 150px;
+    
+}
+
+/*.logo img{
+    width: 200px;
+}*/
+
+.logo{
+    width: 150px;
+   
+}
+
+.links{
+    margin-right: 35px;
+}
+
+.links li{
+    list-style: none;
+    display: inline;
+   
+}
+
+.links li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-left: 40px;
+    transition: 0.5s ease;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+}
+
+
+.links li a.active-home{
+    background-color: rgb(201, 26, 50);
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+}
+
+li a:hover, li a:active {
+    background-color: rgb(201, 26, 50);
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+  
+}
+
+/***Nabvar/Barra de navegación***/
+
+.menu{
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    
+}
+
+.bar{
+    
+    width:40px;
+    height: 6px;
+    background:rgb(201, 26, 50);
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    transition: all .5s ease-in-out;
+}
+
+.bar::before, .bar::after{
+    position: absolute;
+    content: '';
+    width:40px;
+    height: 6px;
+    background:rgb(201, 26, 50);
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.bar::before{
+    transform: translateY(-12px);
+}
+
+.bar::after{
+    transform: translateY(12px);
+}
+
+/***--------***/
+
+h1{
+    margin-top: 20px;
+    font-family: 'Aboreto', cursive;
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+}
+
+
+h1 span{
+    color:rgb(201, 26, 50);
+}
+
+
+h2{
+    font-family:'Roboto', sans-serif ;
+    font-weight: 100;
+    color: white;
+    text-align: center;
+}
+
+.buttons-container{
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      gap: 35px;
+}
+
+
+button{
+    background: linear-gradient(0deg, rgba(30,16,41,1) 10%, rgba(30,16,41,1) 15%, rgba(108,33,64,1) 83%);
+    /*-image: url(img/background2.jpeg);*/
+    width: 150px;
+    height: 50px;
+    border: none;
+    color: white;
+    font-size:1.2rem ;
+    border-radius: 25px;
+    text-align: center;
+    font-family:'Roboto', sans-serif ;
+    transition: .5s ease-in-out;
+}
+
+button:hover{
+    color:rgb(201, 26, 50) ;
+    border: 1px solid rgb(201, 26, 50);
+}
+
+
+/***Difuminado antes y después del main***/
+
+.purple-background::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to top,rgba(108,33,64,1), transparent);
+}
+
+
+.purple-background::after{
+    content: "";
+    position:absolute;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to bottom, rgba(30,16,41,1), transparent);
+}
+
+/***--------***/
+
+
+.main-container{
+    position:relative;
+    width: 100%;
+	height: 100vh;
+
+}
+
+.polygon{
+    position:absolute;
+    left:0;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    /*background-color: black;*/
+    background-image: url(img/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0 15%, 100% 6%, 100% 94%, 0 84%);
+  }
+
+
+
+.music-logo-container{
+    position: absolute;
+    left: 160px;
+    top: 120px;
+  }
+
+.music-logo{
+    width: 300px;
+}
+
+.howto-container{
+    position: absolute;
+    right:75px;
+    top:170px
+  }
+
+.howto-container h3, .howto-container p{
+    color: white;
+    text-align: right;
+    width: 450px;
+    margin-top: 20px;
+}
+
+.howto-container h3{
+     font-family: 'Aboreto', cursive;
+     font-size: 2.8rem;
+     color: rgb(201, 26, 50);
+}
+
+span{
+    color:rgb(201, 26, 50);
+}
+
+.howto-container p{
+    font-family:'Roboto', sans-serif ;
+    font-size: 1.8rem;
+}
+
+
+.purple-background{
+    background: linear-gradient(0deg, rgba(30,16,41,1) 10%, rgba(30,16,41,1) 15%, rgba(108,33,64,1) 83%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.artists{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding-bottom: 50px;
+  
+}
+.bad-omens {
+    width:50%;
+    border-radius: 20px;   
+}
+
+footer{
+
+     background-image: url(img/header.jpg);
+     text-align: center;
+}
+
+
+.molo{
+    width: 150px;
+}
+
+.line-container{
+    display: flex;
+    justify-content: center;
+}
+.line{
+    width: 450px;
+    border-top: 1px solid white;
+    margin-top: 0 auto;
+}
+
+
+h4{
+    font-family: 'Poppins', sans-serif;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    color: white;
+    font-size: 1.1rem;
+}
+
+
+
+/*********Página Votar**********/
+
+.votar-background{
+    background: linear-gradient(0deg, rgba(30,16,41,1) 10%, rgba(30,16,41,1) 15%, rgba(108,33,64,1) 83%);
+}
+
+
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+form input, form #song-select{
+    font-family: 'Poppins', sans-serif;
+}
+
+input{
+    color: white;
+    border: none;
+    background: none;
+    width:100%;
+    height: 25px;
+    border-bottom: 1px solid rgb(108, 33, 64);
+    outline: none;
+    padding-left: 5px;
+    font-size: 0.9rem;
+
+}
+
+/*Formulario*/
+
+.votar-form{
+    /* display: flex;
+     justify-content: center;
+     background-color:rgb(0, 0, 0);*/
+     background: linear-gradient(to top,rgb(0 0 0), rgba(0, 0, 0, 0.863) );
+     margin-top: 30px;
+     padding: 20px;
+     width: 40%;
+     height: 450px;
+     border-radius:20px;
+     margin-bottom: 60px;
+    
+}
+
+#song-select{
+    margin-top:20px;
+    border: none;
+    outline: none;
+    width: 50%;
+    height:30px;
+    padding-left:5px;
+    border-radius: 15px;
+    background: black;
+    color:white;
+    box-shadow: 1px 1px 3px rgb(108, 33, 64);
+    display:inline-block;
+ }
+ 
+ #song-select option{
+    background: black;
+ }
+
+
+ .select-container{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+ }
+
+/********Lista de canciones*********/
+
+.scrolling-container{
+    margin-top: 40px;
+    height: 100vh;
+}
+
+.scrolling-wrapper{
+    display: flex;
+	overflow-x:scroll;
+     
+}
+
+.card-container{
+    margin-left: 15px;
+}
+
+.card{
+    position: relative;
+    width: 250px;
+    height: 300px;
+    background-color: rgb(37, 33, 33);
+    border-radius: 15px;
+    cursor: pointer;
+
+    
+}
+
+
+.card a{
+    text-decoration: none;
+}
+
+.card img{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 250px;
+    height: 140px;
+    
+}
+
+.text-container::after{
+    content: "";
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to top,rgb(0 0 0), transparent);
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+}
+
+
+.text-container{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+/***Difuminado de cada una de las cards***/
+
+.black::after{
+    content: "";
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to top,rgb(0 0 0), transparent);
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+}
+
+.purple::after{
+    content: "";
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to top,rgb(0 0 0), transparent);
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+}
+
+.red::after{
+    content: "";
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to top,rgb(0 0 0), transparent);
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+}
+/******/
+
+
+.card h2, .card p{
+      color: rgb(255, 255, 255);
+      font-family: 'Aboreto', cursive;
+      font-weight: bold;
+      z-index: 10;
+}
+
+
+
+/*.artist-name, .artist-song{
+     margin-top: 15px;
+}
+
+.artist-song{
+    background: rgb(32, 31, 31);
+    border-radius: 10px;
+    padding: 5px;
+}*/
+
+
+
+
+@media (max-width:768px){
+
+    h1{
+        font-size:3.5rem
+    }
+
+
+
+    h1, h2, .buttons-container{
+        padding:10px;
+   }
+
+   .purple-background::before{
+       height:80px;
+   }
+
+    /***Navbar/Barra de navegación***/
+  
+    .logo{
+          width:130px;
+    }
+    .nav-container{
+        flex-direction: column;
+    }
+    .nav-container ul {
+        margin: 0px;
+        flex-direction: column;
+        text-align: center;
+        display: none;
+    }
+    .nav-container ul li{
+        padding: 0;
+        line-height: 10px;
+    }
+     .bar{
+         display: flex;
+         
+     }
+     .menu.open-close-btn .bar {
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+      }
+      .menu.open-close-btn .bar::before {
+        transform: rotate(45deg) translate(35px, -35px);
+      }
+      .menu.open-close-btn .bar::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+      }
+
+   .nav-container ul.active{
+         display: flex;
+        
+     }
+
+    
+    /***Imágenes del slider de la página Inicio***/
+    .bad-omens {
+        width:100%;
+        border-radius: 0;   
+    }
+
+    /***Formulario de la página votar***/
+     .votar-form{
+        width: 90%;
+     }
+}
+
+
+@media (max-width:380px) {
+     /***Página de Inicio contenedor polígono***/
+
+     .polygon{
+        clip-path: polygon(0 25%, 100% 6%, 100% 94%, 0 75%);
+     }
+
+    .music-logo-container{
+        position: absolute;
+        right:25px;
+        top: 120px;
+    }
+
+    .music-logo{
+        width: 170px;
+    }
+
+    .howto-container{
+        position: absolute;
+        right:25px;
+       top:320px;
+      }
+    
+        
+    .howto-container h3, .howto-container p{
+            width:240px;
+     
+    }
+    
+    .howto-container h3{
+          font-size:1.8rem;
+    }
+    
+    .howto-container p{
+            font-size: 1.5rem;
+    }
+     
+}
+

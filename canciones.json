@@ -1,0 +1,89 @@
+{
+    "canciones1":[
+        {
+          "foto":"voices",
+          "artista":"Motionless in White",
+          "tema": "Voices",
+          "url": "https://www.youtube.com/watch?v=B3faYe5V4Sk"
+        },
+        {
+            "foto":"limits",
+            "artista": "Bad Omens",
+            "tema": "Limits",
+            "url": "https://www.youtube.com/watch?v=vTDjXjZO_hk"
+        },
+        {
+            "foto":"lupakanmu",
+            "artista": "Gisel",
+            "tema": "Lupakanmu"
+        },
+        {
+            "foto":"disparo",
+            "artista":"Acru",
+            "tema": "Disparo",
+            "url": "https://www.youtube.com/watch?v=vTDjXjZO_hk"
+        },
+
+        {
+              "foto":"gem-light",
+              "artista": "Gem",
+              "tema": "Light Years Away",
+              "url": ""
+        },
+        {
+              "foto":"sola",
+              "artista": "Frnacisca Michielin",
+              "tema": "Sola"
+        },
+        {
+              "foto":"vincero",
+              "artista": "Annalisa",
+              "tema": "Vincerò"
+        },
+        {
+              "foto":"popstars",
+              "artista": "K/DA",
+              "tema": "POP/STARS"
+        }
+    ]
+    ,
+    "canciones2":[
+        {
+          "foto":"myrath-believer",
+          "artista": "Myrath",
+          "tema": "Believer"
+
+        },
+        {
+            "foto":"myconfession",
+            "artista": "Kamelot ft. EKLIPSE",
+            "tema": "My confession"
+        },
+        {
+            "foto":"gem-zaijian",
+            "artista": "Gem",
+            "tema": "Zaijian"
+        },
+        {
+            "foto":"gem-zaijian",
+            "artista": "Gem",
+            "tema": "Zaijian"
+        }
+        ,
+        {
+            "foto":"gem-zaijian",
+            "artista": "Gem",
+            "tema": "Zaijian"
+        },
+        {
+            "foto":"gem-zaijian",
+            "artista": "Gem",
+            "tema": "Zaijian"
+        },
+        {
+            "foto":"gem-zaijian",
+            "artista": "Gem",
+            "tema": "Zaijian"
+        }
+    ]
+}
